@@ -45,7 +45,7 @@ namespace SampleFilingApiClient
         {
             if (string.IsNullOrWhiteSpace(trackingId)) throw new ArgumentException("Parameter `trackingId` cannot be null or empty");
 
-            RestRequest request = new RestRequest($"status/tax-and-wage-report/{trackingId}", Method.POST);
+            RestRequest request = new RestRequest($"status/tax-and-wage-report/{trackingId}", Method.GET);
 
             return SubmitRequest(request);
         }
